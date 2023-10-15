@@ -77,7 +77,7 @@ public class ControllerTest {
 
     @Test
     public void testDeleteBuddyInfo() throws Exception {
-        String requestBody = "{\"name\":\"mbappe\", \"phone\":\"7\"}";
+        String requestBody = "{\"name\":\"ronaldo\", \"phone\":\"7\"}";
         mockMvc.perform(post("/buddyInfoes")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(requestBody))
