@@ -1,7 +1,6 @@
 package org.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 import java.util.Optional;
 
-@Controller
-public class GUIController {
+@org.springframework.stereotype.Controller
+public class Controller {
 
     private AddressBookRepository addressBookRepository;
 
     @Autowired
-    public GUIController(AddressBookRepository addressBookRepository) {
+    public Controller(AddressBookRepository addressBookRepository) {
         this.addressBookRepository = addressBookRepository;
     }
 

@@ -16,7 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
-public class WebAppTest {
+public class ControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -84,6 +84,6 @@ public class WebAppTest {
                 .andExpect(status().isCreated());
 
         mockMvc.perform(delete("/buddyInfoes/1"))
-                .andExpect(status().is(204)); // Adjust the status code as needed
+                .andExpect(status().is(204));
     }
 }
