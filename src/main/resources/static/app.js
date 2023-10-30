@@ -15,7 +15,6 @@ $(document).ready(function () {
             data: JSON.stringify(data),
             contentType: "application/json"
         }).done(function(resp) {
-            console.log(resp)
             if (resp) {
                 const buddy = `<p>${JSON.stringify(resp)}</p>`;
                 $(".list").append(buddy);
