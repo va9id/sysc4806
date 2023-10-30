@@ -77,7 +77,10 @@ public class Controller {
             buddyInfoRepository.save(buddyInfo);
             addressBook.addBuddy(buddyInfo);
             addressBookRepository.save(addressBook);
+            return new ResponseEntity<>(buddyInfo.toString(), HttpStatus.OK);
         }
-        return new ResponseEntity<>(buddyInfo.toString(), HttpStatus.OK);
+        return new ResponseEntity<>(
+                String.format("Error: No AddressBook found with ID=%d", addressBookId),
+                HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
