@@ -11,15 +11,6 @@ public class BuddyInfo {
     private String name;
     private String phone;
 
-    /*
-    @ManyToOne
-    @JoinColumn(name="address_book_id")
-    @JsonIgnore
-    private AddressBook addressBook;
-     */
-
-
-
     public BuddyInfo() {}
     public BuddyInfo(String name, String phone) {
         this.name = name;
@@ -54,15 +45,4 @@ public class BuddyInfo {
     public String toString() {
         return new StringBuilder().append("BuddyInfo{").append("id=").append(id).append(", name='").append(name).append('\'').append(", phone='").append(phone).append('\'').append('}').toString();
     }
-
-    /*
-    public AddressBook getAddressBook() {
-        return addressBook;
-    }
-
-    public void setAddressBook(AddressBook addressBook) {
-        this.addressBook = addressBook;
-    }
-
-     */
 }
