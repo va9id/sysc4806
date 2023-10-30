@@ -36,3 +36,5 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+curl_lab5.sh
